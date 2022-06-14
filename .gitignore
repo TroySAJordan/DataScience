@@ -1,3 +1,9 @@
+# Books not covered under LICENSE
+Books/DataScienceUsingPythonAndR/DataSets
+
+# VSCODE
+.vscode/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -19,6 +25,7 @@ lib64/
 parts/
 sdist/
 var/
+
 wheels/
 share/python-wheels/
 *.egg-info/

@@ -1,0 +1,47 @@
+Q01: What are the two main objectives of the bank_marketing analysis, as statted in the Problem Understand Phase?
+    1; To identify positive repsonders to the marketing campaing for a fixed term deposit in order to reduce costs and increase chance of revenue.
+    2; To understand the customers who do and do not bank with us.
+A01-1: Learn about our potential customers. That is, learn the characteristics of thouse who choose to bank with us, as well as those who do not.
+A01-2: Develop a profitable method of identifying likely postive responsers, so that we may save time and money. That is, develop a model or models that will identify likely postiive repsonse. Quantify the expected profit from using these models.
+
+Q02: What are the three ways we plan to accomplish the objective of learning about our potential customers.
+    Use Expoloritory Data Analysis to identify outliers, errors/potential cleansing and record groupings.
+A02-1: Use EDA to express osme simple graphic relationships among the variable. For example, use a histogram of age overlain with information about the repsonse yes/no to visualize whether age has a bearing on customer response.
+A02-2: Use Clustering to determine whether there are natural groupsing within our peotential customers, for example, younger/more-educated vs older/less-educated. Then see if these clusters differ with respect to their response to the marketing.
+A02-3: Use Association Rules to see wehther there are usefull relationships among subsets of the records. For exmaple, suppose the rule, "If cell phone, then response = YES" has good support and high confidence. This would allow our marketing people to develop a targeted campaign to cellphone users, independent of the results of our overall modeling. 
+
+Q03: Explain how we plan to accomplish the objective of developing profitable models for identifying likely positive repsonders?
+    Apply mulitiple categorical models, assess their accuracy and discuss with the marketing team as to which would be the best model to use.
+A03: Develop the best classification model using Decision Trees, Random Forests, Naive Bayes Classification, Nueral Networks and Logistics Regression. Evaluate each model based on predetermined model evaluation criteria. Consult with management regardin the best model or models with wich to move forward to the deplyment phase.
+
+Q04: Describe two reasons why it might be a good idea to add an index field to the data set?
+    1; To keep track of the oringal data set sort order.
+    2; To clearly identify unique records.
+A04: it acts as an ID and tracks sort order.
+
+Q05: Explain why the field days_since_previous is essentially useless until we handle the 999 code?
+    As this is a numeric field the value of 999 is missleading as being greater than all numbers below it. Its correct value should ba NULL/NaN.
+A05: Correct
+
+Q06: Why was it important to reexpress education as a numeric field?
+    Without a numerical representation the models are unable to understand thier importance/value.
+A06: Correct
+
+Q07: Suppose a data value has a z-value of 1. How may we interpret this value?
+    The value is 1 standard deviations away from the mean value. 
+A07: Correct
+
+Q08: What is the rough rule of thumb for identifying outliers using z-values?
+    Anything +/-1.5.
+A08: Anything +/-3.0 
+
+Q09: Should outliers be automatically removed or changed? Why or why not?
+    No - While outliers may represent incorrect data (as found with days_since_previous), the outlier may infact be important information for the model.
+A09: Correct, you should consult the client/DB admin as their unusual values may bring to light important asspects of the data. 
+
+Q10: What should we do with outliers we have identified?
+    Identify if they should;
+     - Have their values adjusted
+     - Have their records/values removed
+     - Be left as is
+A10: Correct, discuss with the client regarging what should be done with the data.
